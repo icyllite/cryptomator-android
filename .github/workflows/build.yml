@@ -20,3 +20,28 @@ jobs:
           java-version: 17
       - name: Build
         run: bash ./gradlew assembleDebug
+      - name: Upload accrescent APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-accrescent-debug
+          path: presentation/build/outputs/apk/accrescent/debug/presentation-accrescent-debug.apk
+      - name: Upload fdroid APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-fdroid-debug
+          path: presentation/build/outputs/apk/fdroid/debug/presentation-fdroid-debug.apk
+      - name: Upload apkstore APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-apkstore-debug
+          path: presentation/build/outputs/apk/apkstore/debug/presentation-apkstore-debug.apk
+      - name: Upload lite APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-lite-debug
+          path: presentation/build/outputs/apk/lite/debug/presentation-lite-debug.apk
+      - name: Upload playstore APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-playstore-debug
+          path: presentation/build/outputs/apk/playstore/debug/presentation-playstore-debug.apk
